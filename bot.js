@@ -901,12 +901,4 @@ client.on('message', message => {
    }
    });
 
-
-client.on("ready", () => { // كود رينبو
-  function lol() {
-    client.guilds.get('462669036698992660').roles.find("name", "Rainbow").setColor("RANDOM");
-  };
-  setInterval(lol, 2000);
-});
-
 client.login(process.env.BOT_TOKEN);
