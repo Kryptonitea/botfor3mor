@@ -686,7 +686,7 @@ client.on('message', message => {
   let embed = new Discord.RichEmbed()
       .setColor("RANDOM")
       .setDescription(`
-💜_____ 🖤😎 - Premium BotEpic - 😎🖤  _____💜
+💜_____ 🖤😎 - 3MoR TV - 😎🖤  _____💜
 
 🖤(-server ⟿⟿⟿⟿⟿ About the server)🖤
 
