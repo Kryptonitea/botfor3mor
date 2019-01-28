@@ -5,7 +5,8 @@ const client = new Discord.Client();
 
 // playing
 client.on('ready', () => {                           
-});
+client.user.setGame(`3MoR TV | -help`,'https://www.twitch.tv/ℕ g A M Codes♥');
+  });
 
 
 client.on('message', message => {
