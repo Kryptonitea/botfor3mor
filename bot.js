@@ -11,7 +11,7 @@ client.user.setGame(`3MoR TV | -help`,'https://www.twitch.tv/ℕ g A M Codes♥'
 
 client.on('message', message => {
               var prefix = "-" ;
-  if (message.content.starts	With(prefix + "admin")) {
+  if (message.content.startsWith(prefix + "admin")) {
   let embed = new Discord.RichEmbed()
       .setColor("RANDOM")
       .setDescription(`
@@ -45,7 +45,6 @@ client.on('message', message => {
 	  
    }
    });
-
 
 
 client.on('ready', () => {
@@ -692,8 +691,6 @@ client.on('message', message => {
 🖤(-server ⟿⟿⟿⟿⟿ About the server)🖤
 
 🖤(-allbots ⟿⟿ Nubmers bots in server)🖤
-
-🖤(-botin ⟿⟿⟿⟿⟿⟿ Bot Information)🖤
 
 🖤(-report ⟿⟿⟿⟿⟿ Report a member)🖤
 
