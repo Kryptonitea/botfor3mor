@@ -5,36 +5,36 @@ const client = new Discord.Client();
 
 // playing
 client.on('ready', () => {                           
-client.user.setGame(`3MoR TV | -help`,'https://www.twitch.tv/ℕ g A M Codes♥');
+client.user.setGame(`3MoR TV | $help`,'https://www.twitch.tv/ℕ g A M Codes♥');
   });
 
 
 client.on('message', message => {
-              var prefix = "-" ;
+              var prefix = "$" ;
   if (message.content.startsWith(prefix + "admin")) {
   let embed = new Discord.RichEmbed()
       .setColor("RANDOM")
       .setDescription(`
 🕴_____ 🖤😎 - 3MoR TV - 😎🖤  _____🕴
 
-🖤(-nick ⟿ Change nickname all members)🖤
-🖤(-banlist ⟿⟿ Number Ban from server)🖤
-🖤(-bc ⟿⟿⟿ Brodcast all member)🖤
-🖤(-call ⟿⟿ Contact with admin)🖤
-🖤(-kv ⟿⟿⟿⟿⟿ Kick from voice)🖤
-🖤(-kick ⟿⟿⟿⟿⟿⟿ Kick member)🖤
-🖤(-ban ⟿⟿⟿⟿⟿⟿⟿ Ban member)🖤
-🖤(-role all ⟿⟿⟿⟿⟿ From All)🖤
-🖤(-role humans ⟿ From All Humans)🖤
-🖤(-role bots ⟿⟿⟿ From All Bots)🖤
-🖤(-clear ⟿⟿⟿⟿ Delete all chat)🖤
-🖤(-mvall ⟿ Move all to you voice)🖤
-🖤(-hc ⟿⟿⟿⟿⟿⟿⟿ Hide channel)🖤
-🖤(-sc ⟿⟿⟿⟿⟿⟿⟿ Show channel)🖤
-🖤(-mc ⟿⟿⟿⟿⟿⟿⟿ Mute channel)🖤
-🖤(-unmc ⟿⟿⟿⟿⟿ Unmute channel)🖤
-🖤(-mute ⟿⟿⟿⟿⟿⟿ Mute member)🖤
-🖤(-unmute ⟿⟿⟿⟿ Unmute member)🖤
+🖤($nick ⟿ Change nickname all members)🖤
+🖤($banlist ⟿⟿ Number Ban from server)🖤
+🖤($bc ⟿⟿⟿ Brodcast all member)🖤
+🖤($call ⟿⟿ Contact with admin)🖤
+🖤($kv ⟿⟿⟿⟿⟿ Kick from voice)🖤
+🖤($kick ⟿⟿⟿⟿⟿⟿ Kick member)🖤
+🖤($ban ⟿⟿⟿⟿⟿⟿⟿ Ban member)🖤
+🖤($role all ⟿⟿⟿⟿⟿ From All)🖤
+🖤($role humans ⟿ From All Humans)🖤
+🖤($role bots ⟿⟿⟿ From All Bots)🖤
+🖤($clear ⟿⟿⟿⟿ Delete all chat)🖤
+🖤($mvall ⟿ Move all to you voice)🖤
+🖤($hc ⟿⟿⟿⟿⟿⟿⟿ Hide channel)🖤
+🖤($sc ⟿⟿⟿⟿⟿⟿⟿ Show channel)🖤
+🖤($mc ⟿⟿⟿⟿⟿⟿⟿ Mute channel)🖤
+🖤($unmc ⟿⟿⟿⟿⟿ Unmute channel)🖤
+🖤($mute ⟿⟿⟿⟿⟿⟿ Mute member)🖤
+🖤($unmute ⟿⟿⟿⟿ Unmute member)🖤
 
 🕴_____ 🖤😎 - 3MoR TV - 😎🖤  _____🕴
 
@@ -51,9 +51,9 @@ client.on('ready', () => {
   console.log('I am ready!');
 });
 client.on('message',async message => {//Toxic Code
-  if(message.author.bot || message.channel.type === '-bc') return;
+  if(message.author.bot || message.channel.type === '$bc') return;
   let args = message.content.split(' ');
-  if(args[0] === `-bc`) {//Toxic Code
+  if(args[0] === `$bc`) {//Toxic Code
     if(!message.member.hasPermission("MANAGE_GUILD")) return message.channel.send('- **أنت لا تملك الصلاحيات اللازمة لأستخدام هذا الأمر**');
     if(!args[1]) return message.channel.send('- **يجب عليك كتابة الرسالة بعد الأمر**');
  
@@ -80,7 +80,7 @@ client.on('message',async message => {//Toxic Code
 
 
 client.on('message' , message => {
-var prefix = "-"
+var prefix = "$"
 
 if (message.author.bot) return;
 if (message.content.startsWith(prefix + "call")) {
@@ -116,7 +116,7 @@ message.channel.send(embed);
 
 
 client.on('message', function(message) {
-    if(message.content.startsWith("-report")) {
+    if(message.content.startsWith("$report")) {
         let messageArgs = message.content.split(" ").slice(1).join(" ");
         let messageReason = message.content.split(" ").slice(2).join(" ");
         if(!messageReason) return message.reply("**@ حدد الشخص الذي تريد البلاغ عنه و بعدها قم بكتابه السبب**");
@@ -144,10 +144,10 @@ let reaction1 = msg.createReactionCollector(reaction1Filter, { time: 12000 });
 let reaction2 = msg.createReactionCollector(reaction2Filter, { time: 12000 });
 reaction1.on("collect", r => {
     message.guild.owner.send(Rembed)
-    message.reply("**# - Done! 🎇**");
+    message.reply("**$ - Done! 🎇**");
 })
 reaction2.on("collect", r => {
-    message.reply("**# - Canceled!**");
+    message.reply("**$ - Canceled!**");
 })
 })
 }
@@ -156,7 +156,7 @@ reaction2.on("collect", r => {
 
 
 client.on("message", message => {
-    var prefix = "-";
+    var prefix = "$";
     const command = message.content.split(" ")[0];
 
     if(command == prefix+"kv"){
@@ -188,7 +188,7 @@ client.on("message", message => {
 });
 
 client.on('message', message => {
-var prefix = "-";
+var prefix = "$";
        if(message.content === prefix + "hc") {
                            if(!message.channel.guild) return message.reply('** This command only for servers**');
 
@@ -216,7 +216,7 @@ var prefix = "-";
 });
 
 client.on('message', message => {
-	var prefix = "-"
+	var prefix = "$"
   if (message.author.x5bz) return;
   if (!message.content.startsWith(prefix)) return;
 
@@ -255,7 +255,7 @@ client.on('message', message => {
 
 
 client.on('message', message => {
-	var prefix = "-"
+	var prefix = "$"
   if (message.author.x5bz) return;
   if (!message.content.startsWith(prefix)) return;
 
@@ -294,7 +294,7 @@ client.on('message', message => {
 
 
 client.on('message', message => {
-var prefix = "-";
+var prefix = "$";
        if(message.content === prefix + "mc") {
                            if(!message.channel.guild) return message.reply('** This command only for servers**');
 
@@ -387,7 +387,7 @@ if(!message.guild.member(client.user).hasPermission("MANAGE_ROLES")) return mess
 });
 
 client.on('message', message => {
-	var prefix = "-";
+	var prefix = "$";
    if(!message.channel.guild) return;
 if(message.content.startsWith(prefix + 'clear')) {
 if(!message.channel.guild) return message.channel.send('**This Command is Just For Servers**').then(m => m.delete(5000));
@@ -431,7 +431,7 @@ msg.delete();
 
 
 client.on("message", message => {
-	var prefix = "-";
+	var prefix = "$";
 	var args = message.content.split(' ').slice(1); 
 	var msg = message.content.toLowerCase();
 	if( !message.guild ) return;
@@ -480,7 +480,7 @@ client.on("message", message => {
 
 
 client.on('message', message => {
-	var prefix = "-";
+	var prefix = "$";
     if(message.content.startsWith(prefix + 'mvall')) {
      if (!message.member.hasPermission("MOVE_MEMBERS")) return message.channel.send('**:x: You Dont Have Perms `MOVE_MEMBERS`**');
        if(!message.guild.member(client.user).hasPermission("MOVE_MEMBERS")) return message.reply("**:x: I Dont Have Perms `MOVE_MEMBERS`**");
@@ -498,7 +498,7 @@ client.on('message', message => {
 
 
 client.on("message", message => {
-    var prefix = "-";
+    var prefix = "$";
     const command = message.content.split(" ")[0];
 
     if(command == prefix+"kv"){
@@ -530,8 +530,8 @@ client.on("message", message => {
 });
 
 
-const adminprefix = "-";
-const developers = ["352533519068823556"]//Nova Codes
+const adminprefix = "$";
+const developers = ["339805433520979969"]//Nova Codes
 client.on('message', message => {//Nova Codes
     var argresult = message.content.split(` `).slice(1).join(' ');//Nova Codes
       if (!developers.includes(message.author.id)) return;
@@ -572,7 +572,7 @@ if (message.content.startsWith(adminprefix + 'setavatar')) {//Nova Codes
 
 
 client.on('message', message => {
-var prefix = "-";
+var prefix = "$";
 if(message.content.split(' ')[0] == prefix + 'dc') {  // delete all channels
 if(message.author.id !== "339805433520979969") return message.reply('**You aren\'t the bot owner.**');
 
@@ -592,7 +592,7 @@ message.reply("âœ… `Success Deleted All Roles - Ranks`")
 });
 
 
-var prefix = "-"
+var prefix = "$"
 
 client.on('message', message => {
     const args = message.content.slice(prefix.length).trim().split(/ +/g);
@@ -655,15 +655,15 @@ var cont = message.content.slice(prefix.length).split(" ");
 
 
 
-var prefix = "-";
+var prefix = "$";
    client.on('message',function(message) { // Leaked by [ @M3a4x ]
       if(message.content === prefix + "inv") {
           if(!message.channel.guild) return;
           var mmmmEmbed = new Discord.RichEmbed()
           .setAuthor(client.user.username)
-          .setTitle('𝔾𝔼𝕂𝕆 𝕌𝕄𝔼')
+          .setTitle('3MoR TV')
           .setURL(`https://discordapp.com/api/oauth2/authorize?client_id=531729259421499402&permissions=8&scope=bot`)
-           if(message.author.id !== "351366504068939777") return message.reply('**You aren\'t the bot owner.**');
+           if(message.author.id !== "339805433520979969") return message.reply('**You aren\'t the bot owner.**');
           message.channel.send(mmmmEmbed)
       }
    });
@@ -681,28 +681,28 @@ var prefix = "-";
 
 
 client.on('message', message => {
-              var prefix = "-" ;
+              var prefix = "$" ;
   if (message.content.startsWith(prefix + "help")) {
   let embed = new Discord.RichEmbed()
       .setColor("RANDOM")
       .setDescription(`
 💜_____ 🖤😎 - 3MoR TV - 😎🖤  _____💜
 
-🖤(-server ⟿⟿⟿⟿⟿ About the server)🖤
+🖤($server ⟿⟿⟿⟿⟿ About the server)🖤
 
-🖤(-allbots ⟿⟿ Nubmers bots in server)🖤
+🖤($allbots ⟿⟿ Nubmers bots in server)🖤
 
-🖤(-report ⟿⟿⟿⟿⟿ Report a member)🖤
+🖤($report ⟿⟿⟿⟿⟿ Report a member)🖤
 
-🖤(-support ⟿⟿ Contact with the bot owner)🖤
+🖤($support ⟿⟿ Contact with the bot owner)🖤
 
-🖤(-avatar ⟿⟿⟿⟿⟿ View your avatar)🖤
+🖤($avatar ⟿⟿⟿⟿⟿ View your avatar)🖤
 
-🖤(-members ⟿⟿⟿⟿ Status of member)🖤
+🖤($members ⟿⟿⟿⟿ Status of member)🖤
 
-🖤(-say ⟿⟿⟿⟿⟿⟿ Status of member)🖤
+🖤($say ⟿⟿⟿⟿⟿⟿ Status of member)🖤
 
-🖤(-emojis ⟿⟿⟿⟿⟿ Emoji Of Server)🖤
+🖤($emojis ⟿⟿⟿⟿⟿ Emoji Of Server)🖤
 
 
 💜_____ 🖤😎 - 3MoR TV - 😎🖤  _____💜
@@ -720,7 +720,7 @@ client.on('message', message => {
 
 
 client.on('message', function(msg) {
-    const prefix = '-'
+    const prefix = '$'
     if(msg.content.startsWith (prefix  + 'server')) {
       let embed = new Discord.RichEmbed()
       .setColor('RANDOM')
@@ -740,7 +740,7 @@ client.on('message', function(msg) {
   });
 
 
-var prefix = "-";
+var prefix = "$";
 
 client.on('message', message => {
      if(!message.channel.guild) return;
@@ -765,7 +765,7 @@ message.channel.send(embed)
 
 
 client.on('message',async message => {
-    var p = "-"
+    var p = "$"
   function timeCon(time) {
   let days = Math.floor(time % 31536000 / 86400)
   let hours = Math.floor(time % 31536000 % 86400 / 3600)
@@ -797,13 +797,13 @@ client.on('message',async message => {
 
 
 client.on("message", message => {
- if (message.content === "-support") {
+ if (message.content === "$support") {
   const embed = new Discord.RichEmbed()
       .setTitle('Click here')
-      .setURL(' https://discord.gg/DbW5YPt ')
+      .setURL(' https://discord.gg/upNWjJ9 ')
       .setColor("RANDOM")
       .setFooter('♥3MoR TV♥ جميع الحقوق محفوظة 2019 لبوت')  
-      .addField('سيرفر الدعم الفني', ` https://discord.gg/t8tXaS  `)
+      .addField('سيرفر الدعم الفني', ` https://discord.gg/upNWjJ9  `)
   message.author.send({embed});
 
  }
@@ -848,7 +848,7 @@ client.on('message', message => {
 
 
 client.on('message', message => { 
-let prefix = '-'
+let prefix = '$'
     if (message.content.startsWith(prefix + 'emojis')) {
 
         const List = message.guild.emojis.map(e => e.toString()).join(" ");
@@ -864,7 +864,7 @@ let prefix = '-'
 });
 
 client.on('message',function(message) {
-	let prefix = "-";
+	let prefix = "$";
 let args = message.content.split(" ").slice(1).join(" ");
 if(message.content.startsWith(prefix + "say")) {
 if(!args) return;
@@ -876,7 +876,7 @@ message.channel.send(`** ${args}**`);
 
 ////////////////////////////////////////////////////OWNER////////////////////////////////////////////////
 client.on('message', message => {
-              var prefix = "-" ;
+              var prefix = "$" ;
   if (message.content.startsWith(prefix + "3MoR")) {
   if(message.author.id !== "339805433520979969") return message.reply('**You aren\'t the bot owner.**');
   let embed = new Discord.RichEmbed()
@@ -884,11 +884,11 @@ client.on('message', message => {
       .setDescription(`
 😈__⚠🚫⚠_ 🖤😎 - 3MoR TV - 😎🖤  _⚠🚫⚠__😈
 
-🖤(-dc ⟿⟿⟿ Delete all channels)🖤
+🖤(#dc ⟿⟿⟿ Delete all channels)🖤
 
-🖤(-dr ⟿⟿⟿⟿ Delete all roles)🖤
+🖤(#dr ⟿⟿⟿⟿ Delete all roles)🖤
 
-🖤(-inv ⟿⟿⟿⟿ Invite bot owner)🖤
+🖤(#inv ⟿⟿⟿⟿ Invite bot owner)🖤
 
 
 😈__⚠🚫⚠_ 🖤😎 - 3MoR TV - 😎🖤  _⚠🚫⚠__😈
